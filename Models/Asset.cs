@@ -12,7 +12,7 @@ public class Asset
   public string Name { get; set; }
  
   [Required]
-  [Range(10, 90)]
+  [Range(10000, 200000000)]
   [Display(Name = "price")]
   public double? Price { get; set; }
  

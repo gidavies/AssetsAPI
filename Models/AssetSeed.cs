@@ -24,7 +24,7 @@ public static class AssetSeed
       {
         AssetNumber = $"{service.First()}{name.First()}{assetId}",
         Name = $"{adjective} {material} {name}",
-        Price = (double) rnd.Next(1000, 9000) / 100,
+        Price = (double) rnd.Next(10000, 200000000),
         Service = service
       };
     }));
