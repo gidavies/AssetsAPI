@@ -341,3 +341,9 @@ healthchecksdb
 bin/Debug/net5.0/*.*
 obj/Debug/net5.0/*.*
 bin
+obj/Debug/net5.0/ref/AssetsAPI.dll
+obj/Debug/net5.0/AssetsAPI.pdb
+obj/Debug/net5.0/AssetsAPI.dll
+bin/Debug/net5.0/ref/AssetsAPI.dll
+bin/Debug/net5.0/AssetsAPI.pdb
+bin/Debug/net5.0/AssetsAPI.dll
