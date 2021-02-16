@@ -11,7 +11,7 @@ env:
   DOTNET_VERSION: '5.0.x'           # dot net version to use
 
 jobs:
-  build:
+  CIBuild:
     runs-on: ubuntu-latest
     environment: 
       name: Build
@@ -32,7 +32,13 @@ jobs:
           dotnet restore
           dotnet build --configuration Release
           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
-          
+  
+  DeployToProd:
+    runs-on: ubuntu-latest
+    environment: 
+      name: Prod
+
+    steps:        
       # Deploy to Azure Web apps
       - name: 'Deploy to Azure App Service using publish profile'
         uses: azure/webapps-deploy@v2
