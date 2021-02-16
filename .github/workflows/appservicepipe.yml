@@ -3,6 +3,7 @@
 
 name: Release Pipeline for Azure App Service
 
+# Trigger on push, PR or release creation in master
 on: 
   push:
     branches:
