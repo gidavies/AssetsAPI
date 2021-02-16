@@ -49,7 +49,7 @@ jobs:
     steps:
       # Get the uploaded build artifacts
       - name: Download CIBuild Artifacts
-      - uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v2
         with:
           name: CIBuildArtifacts
 
