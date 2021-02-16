@@ -7,7 +7,7 @@ on: [push]
 
 env:
   AZURE_WEBAPP_NAME: gdassetsapi    # App Service app name
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # Path to the web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: '.'    # Path to the web app project, defaults to the repository root
   DOTNET_VERSION: '5.0.x'           # dot net version to use
 
 jobs:
@@ -57,6 +57,6 @@ jobs:
       - name: 'Deploy to Azure App Service using publish profile'
         uses: azure/webapps-deploy@v2
         with: 
-          app-name: ${{ env.AZURE_WEBAPP_NAME }} # Replace with your app name
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} # Define secret variable in repository settings as per action documentation
+          app-name: ${{ env.AZURE_WEBAPP_NAME }} 
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }} 
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
