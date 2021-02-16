@@ -3,7 +3,16 @@
 
 name: Release Pipeline for Azure App Service
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types:
+      - created
 
 env:
   AZURE_WEBAPP_NAME: gdassetsapi    # App Service app name
