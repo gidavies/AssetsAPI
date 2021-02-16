@@ -46,7 +46,13 @@ jobs:
     environment: 
       name: Prod
 
-    steps:        
+    steps:
+      # Get the uploaded build artifacts
+      - name: Download CIBuild Artifacts
+      - uses: actions/download-artifact@v2
+        with:
+          name: CIBuildArtifacts
+
       # Deploy to Azure Web apps
       - name: 'Deploy to Azure App Service using publish profile'
         uses: azure/webapps-deploy@v2
