@@ -32,7 +32,15 @@ jobs:
           dotnet restore
           dotnet build --configuration Release
           dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
-  
+      
+      # As the pipeline is split across jobs, upload the build artifacts
+      - name: Upload CIBuild Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: CIBuildArtifacts
+          path: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/artifacts'
+
+  # Deploy to Prod Job        
   DeployToProd:
     runs-on: ubuntu-latest
     environment: 
