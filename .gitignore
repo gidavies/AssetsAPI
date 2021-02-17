@@ -347,3 +347,5 @@ obj/Debug/net5.0/AssetsAPI.dll
 bin/Debug/net5.0/ref/AssetsAPI.dll
 bin/Debug/net5.0/AssetsAPI.pdb
 bin/Debug/net5.0/AssetsAPI.dll
+.vscode/launch.json
+.vscode/tasks.json
