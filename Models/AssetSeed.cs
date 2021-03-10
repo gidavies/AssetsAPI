@@ -8,7 +8,7 @@ public static class AssetSeed
     var rnd = new Random();
  
     var adjectives = new [] { "Tiny", "Average", "Large", "Humungus"};
-    var materials = new [] { "Steel", "Wooden", "Concrete", "Plastic", "Granite", "Rubber" };
+    var materials = new [] { "Paper", "Wooden", "Concrete", "Plastic", "Granite", "Rubber" };
     var names = new [] { "Tank", "Ship", "Submarine", "Interceptor", "Helicopter", "Transport" };
     var services = new [] { "Army", "Navy", "Air Force"};
  
